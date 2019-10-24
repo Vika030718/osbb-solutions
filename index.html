@@ -29,8 +29,8 @@
                         <i class="fas fa-bars"></i>
                     </a>
                 </div>
-                <div class="menu__main">
-                    <nav>
+                <div class="menu__main menu_opened">
+                    <nav class="menu__nav">
                         <ul class="menu__list">
                             <li><a href="" class="menu__item menu__item_active">Главная</a></li>
                             <li><a href="" class="menu__item">Новости</a></li>
@@ -38,8 +38,8 @@
                         </ul>
                     </nav>
                     <div class="dropdown language">
-                        Русский
-                        <button class="dropdown-toggle language__toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span>Русский</span>
+                            <button class="dropdown-toggle language__toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         </button>
                         <div class="dropdown-menu language__menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="#">English</a>
@@ -49,9 +49,11 @@
                 
             </div>
             <div class="header__main">
-                <h1 class="header__title">ОСББ "Образцовый" - Демо Версия</h1>
-                <a href="" class="main-btn">Регистрация</a>
-                <a href="" class="header__link">Вход</a>
+                <div class="header__main-wrapper ">
+                    <h1 class="header__title">ОСББ "Образцовый" - Демо Версия</h1>
+                    <a href="" class="main-btn">Регистрация</a>
+                    <a href="" class="header__link">Вход</a>
+                </div>
                 <img src="static/img/Macbook.png" class="mw-100" alt="">
             </div>
         </div>

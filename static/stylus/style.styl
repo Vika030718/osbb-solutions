@@ -47,7 +47,7 @@ body
 		box-shadow: none;
 		background-color: btn-hover-color;
 	@media (max-width: medium-width)
-		font-size: 18px;
+		font-size: 14px;
 button
 	outline: none!important;
 	border: none!important;
@@ -66,7 +66,6 @@ a
 .header__wrapper
 	display: flex;
 	flex-direction: column;
-
 .header__main
 	height: 100%;
 	display: flex;
@@ -75,16 +74,28 @@ a
 	align-items: center;
 	display: flex;
 	flex-direction: column;
+.header__main-wrapper
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	@media (max-width: medium-width)	
+		height: 100%;
 .header__title
 	color: #FFFFFF;
 	font-size: 56px;
 	line-height: 65px;
 	font-family: Roboto-Bold;
-	margin-top: 132px;
+	margin-top: 120px;
 	margin-bottom: 36px;
 	text-align: center;
 	width: 100%;
 	max-width: 570px;
+	@media (max-width: medium-width)	
+		font-size: 24px;
+		line-height: 30px;
+		margin-bottom: 28px;
+		max-width: 248px;
 .header__link
 	font-size: 16px;
 	margin-top: 13px;
@@ -92,11 +103,15 @@ a
 	color: #ffffff;
 	&:hover
 		color: #d0e5ff;
+	@media (max-width: medium-width)
+		font-size: 14px;
+		
 /*-----------------------------------MENU*/
 .menu
 	padding-top: 42px;
 	display: flex;
 	justify-content: space-between;
+
 	@media (max-width: medium-width)
 		font-size: 18px;
 		padding-top: 42px;
@@ -112,8 +127,12 @@ a
 	padding: 0;
 	list-style-type: none;
 	margin-bottom: 0;
+	justify-content: center;
+	@media (max-width: medium-width)
+		flex-direction: column;
 .menu__toggler
 	display: none;
+	cursor: pointer;
 	@media (max-width: medium-width)	
 		display: block;
 .menu__top
@@ -121,30 +140,40 @@ a
 	justify-content: space-between;
 	padding: 15px;
 	align-items: center;
+	min-width: 245px;
 	@media (max-width: medium-width)
 		background-color: #fff;
+		height: 70px;
+		z-index: 17;
+		width: 100%;
+		position: fixed;
 .menu__main
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	transition: margin-left .2s;
 	@media (max-width: medium-width)
 		display: flex;
 		flex-direction: column;
 		background-color: #fff;
 		max-width: 253px;
-/*-----------------------------------LANGUAGE*/
-.language
-	color: #ffffff;
-	@media (max-width: medium-width)	
-		color: #212121;
-.language__menu
-	left: -63px!important;
-.language__toggle
-	background-color: transparent;
-	border: none;
-	color: #ffffff;
-	@media (max-width: medium-width)	
-		color: #212121;
-/*-----------------------------------MENU*/
+		position: fixed;
+		z-index: 16;
+		height: 100%;
+		padding-top: 70px;
+		align-items: flex-start;
+.menu_opened
+	@media (max-width: medium-width)
+		margin-left: -253px;
+.menu__nav
+	display: flex;
+	flex: 1 1 100%;
+	justify-content: center;
+	align-items: center;
+	@media (max-width: medium-width)
+		padding: 15px;
+		align-items: flex-start;
 .menu__item
 	font-size: 17px;
 	color: #D0E5FF;
@@ -155,13 +184,43 @@ a
 		text-decoration: none;
 	@media (max-width: medium-width)	
 		color: #212121;
-
+		font-size: 18px;
+		padding: 10px 0;
+		display: block;
+		margin: 0;
+		font-family: Roboto-Bold;
 .menu__item_active
 	color: #FFFFFF;
 	@media (max-width: medium-width)	
 		color: #212121;
-.menu__main
-	width: 100%;
+
+/*-----------------------------------LANGUAGE*/
+.language
+	color: #ffffff;
+	display: flex;
+	@media (max-width: medium-width)	
+		color: #212121;
+		border-top: 1px solid rgba(208, 208, 208, 0.6);
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 13px;
+		flex-wrap: wrap;
+.language__menu
+	left: -78px!important;
+	transform: none!important;
+	top: 25px!important;
+	@media (max-width: medium-width)
+		width: 100%;
+		position: static!important;
+.language__toggle
+	background-color: transparent;
+	border: none;
+	color: #ffffff;
+	@media (max-width: medium-width)	
+		color: #212121;
+
 /*-----------------------------------LOGO*/
 .logo
 	display: flex;
@@ -198,6 +257,7 @@ a
 	line-height: 1em;
 	@media (max-width: medium-width)
 		color: #212121;
+
 /*-----------------------------------PLACEHOLDER*/
 .placeholder 
 	display: flex;
@@ -265,17 +325,23 @@ a
 	margin-top: 44px;
 	border-radius: 4px;
 	padding: 14px 44px;
+
 /*-----------------------------------INFO*/
 .info
 	padding-top: 85px;
 	padding-bottom: 100px;
 	max-width: 1140px;
 	margin: auto;
+	@media (max-width: medium-width)
+		padding-top: 30px;
 .info__title
 	font-size: 28px;
+	margin-top: 10px;
 	margin-bottom: 20px;
 .info__img
 	padding-right: 50px;
+	@media (max-width: medium-width)
+		padding-right: 0;
 .info__description
 	padding-left: 50px;
 	height: 100%;
@@ -283,12 +349,16 @@ a
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: center;
+	@media (max-width: medium-width)
+		padding-left: 0;
 .info__text
 	font-size: 16px;
 	color:rgba(0,0,0,0.6);
 	margin-bottom: 40px;
 	width: 100%;
 	max-width: 440px;
+	@media (max-width: medium-width)
+		margin-bottom: 20px;
 
 /*-----------------------------------MAP*/
 .map__iframe
@@ -307,13 +377,13 @@ a
 .footer__wrapper
 	display: flex;
 	justify-content: space-between;
-
 .footer__text
 	margin: 0;
 	font-size: 16px;
+	@media (max-width: medium-width)
+		font-size: 10px;
 
 /*-----------------------------------BOOTSTRAP MODIFICATION*/
-
 .carousel-indicators
 	bottom: -50px!important;
 	margin-bottom: 0;
